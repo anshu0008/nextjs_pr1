@@ -13,6 +13,9 @@ const nextConfig = {
         topLevelAwait: true,
       }
       return config
+    },
+    env:{
+      OPENAI_API_KEY : process.env.OPENAI_API_KEY
     }
   }
   

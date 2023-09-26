@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
@@ -12,9 +14,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   const [resultData, setResultData] = useState("");
   const [check, setCheck] = useState(false);
 
-  const apiKey = "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";
   const client = axios.create({
-    headers: { Authorization: "Bearer " + apiKey },
+    headers: { Authorization: "Bearer " + process.env.OPENAI_API_KEY },
   });
 
   const handleKeyUp = (e) => {
@@ -51,7 +52,6 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
     if (inputElement) {
       inputElement.addEventListener('keyup', handleKeyUp);
     }
-    
     // Clean up the event listener when the component unmounts
     return () => {
       if (inputElement) {

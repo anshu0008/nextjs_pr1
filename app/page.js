@@ -3,6 +3,8 @@ import Feed from '@components/Feed';
 import React from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 const Home = () => {
+
+
   return (
     <section className='w-full flex-center flex-col'>
       <Toaster />
