@@ -12,6 +12,14 @@ const PromptSchema = new Schema({
   tag: {
     type: String,
     required: [true, 'Tag is required.'],
+  },
+  vote : {
+    type:Number,
+    required:true
+  },
+  promptDetails: {
+    type: String,
+    required: [true, 'PromptDetails is required.'],
   }
 });
 

@@ -59,9 +59,7 @@ const Feed = () => {
         console.log(err);
       }
     }
-    console.log(posts);
-
-    fetchPost();
+        fetchPost();
   },[])
 
   const handleTagClick=(tagName)=>{
@@ -77,7 +75,7 @@ const Feed = () => {
       <form className='relative w-full flex-center'>
         <input
           type='text'
-          placeholder='Search for a tag or a UserName'
+          placeholder='Search for a tags , prompt or a UserName'
           value={searchText}
           onChange={handleSearchChange}
           required

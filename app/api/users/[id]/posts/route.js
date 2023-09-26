@@ -7,11 +7,11 @@ export const GET=async(request,{params})=>{
 
         const prompts=await Prompt.find({
             creator:params.id
-        }).populate('creator');
+        }).populate('creator').sort({vote:-1});
 
 
         return new Response(JSON.stringify(prompts),{status:200});
     }catch(err){
-        return new Response("Error in getting new Post",{status:500})
+        return new Response("Error in getting Posts",{status:500})
     }
 }
